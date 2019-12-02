@@ -11,7 +11,7 @@
       class="w-full flex justify-center flex-wrap"
     >
       <h1
-        class="w-full flex justify-start text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl
+        class="w-full flex justify-start text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl
                 ml-4 pl-4 sm:ml-8 sm:pl-4 md:ml-16 md:pl-8 lg:ml-32 lg:pl-16 xl:ml-48 xl:pl-32 font-thin"
         :style="{
           transform: 'translateY(' + '-' + yPos * 0.8 + 'px)',
@@ -21,7 +21,7 @@
         Hi, i'm Eulier González
       </h1>
       <div
-        class="w-full text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl flex items-center justify-start
+        class="w-full text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl flex items-center justify-start
                 ml-4 pl-4 sm:ml-8 sm:pl-4 md:ml-16 md:pl-8 lg:ml-32 lg:pl-16 xl:ml-48 xl:pl-32"
         style="height: 7.5vh;"
         :style="{

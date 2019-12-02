@@ -44,6 +44,64 @@
               {{ project.name }}
             </h1>
             <p class="w-full">{{ project.description }}</p>
+            <p class="w-full flex flex-wrap" v-if="project.techIcons">
+              <span v-for="(icon, j) in project.techIcons" :key="j">
+                <font-awesome-icon
+                  v-if="!icon.startsWith('c-')"
+                  :icon="['fab', icon]"
+                  class="mx-2 mt-2 text-2xl"
+                />
+                <img
+                  v-if="icon.startsWith('c-inkscape')"
+                  src="~/assets/c-inkscape.svg"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 25px;
+                          height: 25px;"
+                />
+                <img
+                  v-if="icon.startsWith('c-gsap')"
+                  src="~/assets/c-gsap.svg"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 25px;
+                          height: 25px;"
+                />
+                <img
+                  v-if="icon.startsWith('c-nuxt')"
+                  src="~/assets/c-nuxt.svg"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 25px;
+                          height: 25px;"
+                />
+                <img
+                  v-if="icon.startsWith('c-vuepress')"
+                  src="~/assets/c-vuepress.png"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 25px;
+                          height: 25px;"
+                />
+                <img
+                  v-if="icon.startsWith('c-mysql')"
+                  src="~/assets/c-mysql.svg"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 45px;
+                          height: 25px;"
+                />
+                <img
+                  v-if="icon.startsWith('c-graphql')"
+                  src="~/assets/c-graphql.svg"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 25px;
+                          height: 25px;"
+                />
+                <img
+                  v-if="icon.startsWith('c-firebase')"
+                  src="~/assets/c-firebase.svg"
+                  class="mx-2 mt-2 text-2xl"
+                  style="width: 25px;
+                          height: 25px;"
+                />
+              </span>
+            </p>
           </div>
         </div>
       </a>
@@ -52,13 +110,13 @@
 </template>
 
 <script>
-import plugImage from "../assets/plug1.jpg";
-import henrymillerImage from "../assets/henrymiller.jpg";
-import enevImage from "../assets/enev.jpg";
-import barcodeImage from "../assets/barcode.jpg";
-import cargillImage from "../assets/cargill.jpg";
-import mosesImage from "../assets/moseswalker.jpg";
-import pbsaImage from "../assets/pbsa.jpg";
+import plugImage from "../assets/plug1.jpg"
+import henrymillerImage from "../assets/henrymiller.jpg"
+import enevImage from "../assets/enev.jpg"
+import barcodeImage from "../assets/barcode.jpg"
+import cargillImage from "../assets/cargill.jpg"
+import mosesImage from "../assets/moseswalker.jpg"
+import pbsaImage from "../assets/pbsa.jpg"
 
 export default {
   data() {
@@ -69,36 +127,77 @@ export default {
           name: "Plugstreaming",
           description: "Admin Dashboard to manage radio station",
           url: "https://plugstreaming.com/plugradio",
-          thumbnail: plugImage
+          thumbnail: plugImage,
+          techIcons: ["html5", "css3-alt", "js", "node-js", "angular"]
         },
         {
           name: "ENEV",
           description: "Etymology Venezuela Name’s State",
           url: "https://reilue.github.io/ENEV/",
-          thumbnail: enevImage
+          thumbnail: enevImage,
+          techIcons: [
+            "html5",
+            "css3-alt",
+            "js",
+            "node-js",
+            "vuejs",
+            "c-inkscape.svg",
+            "c-gsap"
+          ]
         },
         {
           name: "Personal Blog",
           description: "Check it 👀",
-          url: "https://gallant-bell-850d88.netlify.com/"
+          url: "https://gallant-bell-850d88.netlify.com/",
+          techIcons: [
+            "html5",
+            "css3-alt",
+            "js",
+            "node-js",
+            "vuejs",
+            "c-vuepress"
+          ]
         },
         {
           name: "PWA Barcode Scanner",
           description: "Barcode Scanner Mobile Web-Browser based",
           url: "https://festive-goldwasser-4a54e3.netlify.com/",
-          thumbnail: barcodeImage
+          thumbnail: barcodeImage,
+          techIcons: ["html5", "css3-alt", "js", "node-js", "vuejs", "c-nuxt"]
         },
         {
           name: "Henry Miller Minister",
           description: "Church Donate's Website ",
           url: "https://henrymillerministries.com/",
-          thumbnail: henrymillerImage
+          thumbnail: henrymillerImage,
+          techIcons: [
+            "html5",
+            "css3-alt",
+            "js",
+            "node-js",
+            "vuejs",
+            "c-nuxt",
+            "php",
+            "laravel",
+            "c-mysql"
+          ]
         },
         {
           name: "Cargill Image Map",
           description: "Cargill map for kiosk",
           url: "http://cargillctl.madebymod.com/",
-          thumbnail: cargillImage
+          thumbnail: cargillImage,
+          techIcons: [
+            "html5",
+            "css3-alt",
+            "js",
+            "node-js",
+            "vuejs",
+            "c-nuxt",
+            "php",
+            "laravel",
+            "c-mysql"
+          ]
         },
         {
           name: "My contact?",
@@ -110,27 +209,47 @@ export default {
           description:
             "A non profit org, to break the cycle of anti-social skills and behaviors and teach respect towards others",
           url: "https://moses-walker-7fdcd.firebaseapp.com/",
-          thumbnail: mosesImage
+          thumbnail: mosesImage,
+          techIcons: [
+            "html5",
+            "css3-alt",
+            "js",
+            "node-js",
+            "vuejs",
+            "c-nuxt",
+            "c-graphql",
+            "c-firebase"
+          ]
         },
         {
           name: "Mentoring PeaceBuilders South Africa",
           description:
             "A non profit org, to manage conflict situations where they do arise",
           url: "https://peacebuilders-south-africa.firebaseapp.com/",
-          thumbnail: pbsaImage
+          thumbnail: pbsaImage,
+          techIcons: [
+            "html5",
+            "css3-alt",
+            "js",
+            "node-js",
+            "vuejs",
+            "c-nuxt",
+            "c-graphql",
+            "c-firebase"
+          ]
         }
       ]
-    };
+    }
   },
   methods: {
     showPreview: function(i) {
-      this.selected = i;
+      this.selected = i
     },
     hidePreview: function() {
-      this.selected = -1;
+      this.selected = -1
     }
   }
-};
+}
 </script>
 
 <style lang="postcss">

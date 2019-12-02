@@ -6,7 +6,7 @@ const routerBase =
           base: "/quieneseulier1/"
         }
       }
-    : {};
+    : {}
 
 export default {
   mode: "spa",
@@ -55,11 +55,30 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    ["nuxt-fontawesome",
+    {
+      imports: [
+        {
+          set: "@fortawesome/free-solid-svg-icons",
+          icons: ["fas"]
+        },
+        {
+          set: "@fortawesome/free-brands-svg-icons",
+          icons: ["fab"]
+        }
+      ]
+    }]
+  ],
   /*
    ** Build configuration
    */
   ...routerBase,
+  buildDir: "docs",
+  server: {
+    port: 8000, // default: 3000
+    host: "192.168.0.104" // default: localhost
+  },
   build: {
     /*
      ** You can extend webpack config here
@@ -75,4 +94,4 @@ export default {
     },
     extend(config, ctx) {}
   }
-};
+}
