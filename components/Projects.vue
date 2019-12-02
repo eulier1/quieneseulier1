@@ -14,7 +14,7 @@
       @mouseenter="showPreview(i)"
       @mouseleave="hidePreview()"
     >
-      <a :href="project.url" target="_blank">
+      <a :href="project.url" target="_blank" rel="noopener">
         <div
           class="overlay-colour"
           :class="{
@@ -57,6 +57,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 25px;
                           height: 25px;"
+                  alt="inkscape logo"
                 />
                 <img
                   v-if="icon.startsWith('c-gsap')"
@@ -64,6 +65,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 25px;
                           height: 25px;"
+                  alt="gsap logo"
                 />
                 <img
                   v-if="icon.startsWith('c-nuxt')"
@@ -71,6 +73,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 25px;
                           height: 25px;"
+                  alt="nuxt logo"
                 />
                 <img
                   v-if="icon.startsWith('c-vuepress')"
@@ -78,6 +81,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 25px;
                           height: 25px;"
+                  alt="vuepress logo"
                 />
                 <img
                   v-if="icon.startsWith('c-mysql')"
@@ -85,6 +89,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 45px;
                           height: 25px;"
+                  alt="mysql logo"                          
                 />
                 <img
                   v-if="icon.startsWith('c-graphql')"
@@ -92,6 +97,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 25px;
                           height: 25px;"
+                  alt="graphql logo"                          
                 />
                 <img
                   v-if="icon.startsWith('c-firebase')"
@@ -99,6 +105,7 @@
                   class="mx-2 mt-2 text-2xl"
                   style="width: 25px;
                           height: 25px;"
+                  alt="firebase logo"
                 />
               </span>
             </p>
