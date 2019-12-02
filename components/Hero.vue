@@ -190,8 +190,10 @@ export default {
       if (top === 0) {
         this.opacity = 1
       }
-      console.log(this.opacity);
     }
+  },
+  destroy() {
+    window.removeEventListener("scroll");
   }
 };
 </script>
