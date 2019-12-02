@@ -126,7 +126,7 @@ export default {
         {
           name: "Plugstreaming",
           description: "Admin Dashboard to manage radio station",
-          url: "https://plugstreaming.com/plugradio",
+          url: "https://play.plugstreaming.com/plugradio",
           thumbnail: plugImage,
           techIcons: ["html5", "css3-alt", "js", "node-js", "angular"]
         },
