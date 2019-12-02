@@ -74,7 +74,6 @@ export default {
    ** Build configuration
    */
   ...routerBase,
-  buildDir: "docs",
   server: {
     port: 8000, // default: 3000
     host: "192.168.0.104" // default: localhost
