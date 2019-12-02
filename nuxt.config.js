@@ -34,8 +34,8 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-      }      
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css"
+      }
     ]
   },
   /*
@@ -60,9 +60,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    "nuxt-fontawesome"
-  ],
+  modules: ["nuxt-fontawesome"],
   /*
    ** Build configuration
    */
