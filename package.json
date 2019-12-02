@@ -14,8 +14,6 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "autoprefixer": "^9.7.3",
     "gsap": "^3.0.1",
     "nuxt": "^2.0.0",

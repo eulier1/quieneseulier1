@@ -46,11 +46,11 @@
             <p class="w-full">{{ project.description }}</p>
             <p class="w-full flex flex-wrap" v-if="project.techIcons">
               <span v-for="(icon, j) in project.techIcons" :key="j">
-                <font-awesome-icon
+                <i
                   v-if="!icon.startsWith('c-')"
-                  :icon="['fab', icon]"
+                  :class="'fab fa-'+icon"
                   class="mx-2 mt-2 text-2xl"
-                />
+                ></i>
                 <img
                   v-if="icon.startsWith('c-inkscape')"
                   src="~/assets/c-inkscape.svg"
