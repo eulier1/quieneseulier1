@@ -34,6 +34,11 @@ export default {
       {
         rel: "stylesheet",
         href:
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      },
+      {
+        rel: "stylesheet",
+        href:
           "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css"
       }
     ]
@@ -65,6 +70,12 @@ export default {
    ** Build configuration
    */
   ...routerBase,
+  /*
+  ** Static Files 
+  */
+  generate: {
+    dir: 'docs'
+  },
   server: {
     port: 8000, // default: 3000
     host: "192.168.0.104" // default: localhost
