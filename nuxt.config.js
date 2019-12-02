@@ -30,7 +30,12 @@ export default {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Fira+Code:300|Lato:100,400,700&display=swap"
-      }
+      },
+      {
+        rel: "stylesheet",
+        href:
+          "https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+      }      
     ]
   },
   /*
