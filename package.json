@@ -20,10 +20,10 @@
     "nuxt-fontawesome": "^0.4.0",
     "postcss": "^7.0.23",
     "postcss-preset-env": "^6.7.0",
-    "push-dir": "^0.4.1",
     "vivus": "^0.4.5"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "push-dir": "^0.4.1"
   }
 }
