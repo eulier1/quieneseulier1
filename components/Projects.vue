@@ -232,7 +232,7 @@ export default {
           name: "Mentoring PeaceBuilders South Africa",
           description:
             "A non profit org, to manage conflict situations where they do arise",
-          url: "https://peacebuilders-south-africa.firebaseapp.com/",
+          url: "https://mentoringpeacebuilders.org/",
           thumbnail: pbsaImage,
           techIcons: [
             "html5",
