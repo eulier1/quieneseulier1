@@ -29,7 +29,7 @@
           opacity: opacity
         }"
       >
-        <h2 class="font-thin">I'd worked as</h2>
+        <h2 class="font-thin">I work as</h2>
         <h2
           ref="devElemTitle"
           class="font-dev"
