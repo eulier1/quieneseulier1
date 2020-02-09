@@ -80,8 +80,8 @@ export default {
     dir: 'docs'
   },
   server: {
-    port: 8000, // default: 3000
-    host: "192.168.0.104" // default: localhost
+    port: 3000,
+    host: "localhost"
   },
   build: {
     /*
