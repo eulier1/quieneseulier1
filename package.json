@@ -14,18 +14,18 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.3",
-    "gsap": "^3.0.1",
-    "nuxt": "^2.0.0",
+    "autoprefixer": "^9.7.5",
+    "gsap": "^3.2.6",
+    "nuxt": "^2.12.2",
     "nuxt-fontawesome": "^0.4.0",
-    "postcss": "^7.0.23",
+    "postcss": "^7.0.27",
     "postcss-preset-env": "^6.7.0",
     "serialize-javascript": "^2.1.1",
     "vivus": "^0.4.5"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.2.3",
-    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^1.4.0",
     "push-dir": "^0.4.1"
   }
 }
