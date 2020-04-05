@@ -1,23 +1,13 @@
 <template>
   <section class="flex flex-wrap">
-    <article
-      class="relative justify-center w-full md:w-1/2 lg:w-1/3 hover:opacity-50"
-      v-for="(project, i) in projects"
-      :key="i"
-      :style="{
+    <article class="relative justify-center w-full md:w-1/2 lg:w-1/3 hover:opacity-50" v-for="(project, i) in state.projects" :key="i" :style="{
         backgroundImage: 'url(' + project.thumbnail + ')',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
-      }"
-      style=" height: 360px"
-      @mouseenter="showPreview(i)"
-      @mouseleave="hidePreview()"
-    >
+      }" style=" height: 360px" @mouseenter="showPreview(i)" @mouseleave="hidePreview()">
       <a :href="project.url" target="_blank" rel="noopener">
-        <div
-          class="overlay-colour"
-          :class="{
+        <div class="overlay-colour" :class="{
             'plug-color': project.name == 'Plugstreaming',
             'henrymiller-color': project.name == 'Henry Miller Minister',
             'enev-color': project.name == 'ENEV',
@@ -26,87 +16,32 @@
             'moses-color': project.name == 'Moses Walker Jr',
             'pbsa-color ':
               project.name == 'Mentoring PeaceBuilders South Africa'
-          }"
-          style="cursor: pointer"
-        >
-          <div
-            v-show="selected === i || i == 2 || i == 6"
-            class="position-center"
-            :class="{
+          }" style="cursor: pointer">
+          <div v-show="state.selected === i || i == 2 || i == 6" class="position-center" :class="{
               'text-black': i == 2 || i == 6,
               'text-white': i != 2 && i != 6
-            }"
-          >
-            <h1
-              class="w-full text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold"
-              :style="{ 'display: block': i == 2 || i == 6 }"
-            >
+            }">
+            <h1 class="w-full text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold" :style="{ 'display: block': i == 2 || i == 6 }">
               {{ project.name }}
             </h1>
             <p class="w-full">{{ project.description }}</p>
             <p class="w-full flex flex-wrap" v-if="project.techIcons">
               <span v-for="(icon, j) in project.techIcons" :key="j">
-                <i
-                  v-if="!icon.startsWith('c-')"
-                  :class="'fab fa-'+icon"
-                  class="mx-2 mt-2 text-2xl"
-                ></i>
-                <img
-                  v-if="icon.startsWith('c-inkscape')"
-                  src="~/assets/c-inkscape.svg"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 25px;
-                          height: 25px;"
-                  alt="inkscape logo"
-                />
-                <img
-                  v-if="icon.startsWith('c-gsap')"
-                  src="~/assets/c-gsap.svg"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 25px;
-                          height: 25px;"
-                  alt="gsap logo"
-                />
-                <img
-                  v-if="icon.startsWith('c-nuxt')"
-                  src="~/assets/c-nuxt.svg"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 25px;
-                          height: 25px;"
-                  alt="nuxt logo"
-                />
-                <img
-                  v-if="icon.startsWith('c-vuepress')"
-                  src="~/assets/c-vuepress.png"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 25px;
-                          height: 25px;"
-                  alt="vuepress logo"
-                />
-                <img
-                  v-if="icon.startsWith('c-mysql')"
-                  src="~/assets/c-mysql.svg"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 45px;
-                          height: 25px;"
-                  alt="mysql logo"                          
-                />
-                <img
-                  v-if="icon.startsWith('c-graphql')"
-                  src="~/assets/c-graphql.svg"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 25px;
-                          height: 25px;"
-                  alt="graphql logo"                          
-                />
-                <img
-                  v-if="icon.startsWith('c-firebase')"
-                  src="~/assets/c-firebase.svg"
-                  class="mx-2 mt-2 text-2xl"
-                  style="width: 25px;
-                          height: 25px;"
-                  alt="firebase logo"
-                />
+                <i v-if="!icon.startsWith('c-')" :class="'fab fa-'+icon" class="mx-2 mt-2 text-2xl"></i>
+                <img v-if="icon.startsWith('c-inkscape')" src="~/assets/c-inkscape.svg" class="mx-2 mt-2 text-2xl" style="width: 25px;
+                          height: 25px;" alt="inkscape logo" />
+                <img v-if="icon.startsWith('c-gsap')" src="~/assets/c-gsap.svg" class="mx-2 mt-2 text-2xl" style="width: 25px;
+                          height: 25px;" alt="gsap logo" />
+                <img v-if="icon.startsWith('c-nuxt')" src="~/assets/c-nuxt.svg" class="mx-2 mt-2 text-2xl" style="width: 25px;
+                          height: 25px;" alt="nuxt logo" />
+                <img v-if="icon.startsWith('c-vuepress')" src="~/assets/c-vuepress.png" class="mx-2 mt-2 text-2xl" style="width: 25px;
+                          height: 25px;" alt="vuepress logo" />
+                <img v-if="icon.startsWith('c-mysql')" src="~/assets/c-mysql.svg" class="mx-2 mt-2 text-2xl" style="width: 45px;
+                          height: 25px;" alt="mysql logo" />
+                <img v-if="icon.startsWith('c-graphql')" src="~/assets/c-graphql.svg" class="mx-2 mt-2 text-2xl" style="width: 25px;
+                          height: 25px;" alt="graphql logo" />
+                <img v-if="icon.startsWith('c-firebase')" src="~/assets/c-firebase.svg" class="mx-2 mt-2 text-2xl" style="width: 25px;
+                          height: 25px;" alt="firebase logo" />
               </span>
             </p>
           </div>
@@ -116,7 +51,9 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import { defineComponent, computed, reactive } from '@vue/composition-api'
 import plugImage from "../assets/plug1.jpg"
 import henrymillerImage from "../assets/henrymiller.jpg"
 import enevImage from "../assets/enev.jpg"
@@ -125,10 +62,20 @@ import cargillImage from "../assets/cargill.jpg"
 import mosesImage from "../assets/moseswalker.jpg"
 import pbsaImage from "../assets/pbsa.jpg"
 
-export default {
-  data() {
-    return {
-      selected: -1,
+interface Project {
+  name: string,
+  description: string,
+  url?: string,
+  thumbnail?: string,
+  techIcons?: string[]
+}
+
+export default defineComponent({
+
+
+  setup() {
+
+    const state = reactive({
       projects: [
         {
           name: "Plugstreaming",
@@ -245,18 +192,27 @@ export default {
             "c-firebase"
           ]
         }
-      ]
+      ],
+      selected: -1
+    })
+
+
+    function showPreview(i: number) {
+      state.selected = i
+    }
+
+    function hidePreview() {
+      state.selected = -1
+    }
+
+    return {
+      state,
+      showPreview,
+      hidePreview
     }
   },
-  methods: {
-    showPreview: function(i) {
-      this.selected = i
-    },
-    hidePreview: function() {
-      this.selected = -1
-    }
-  }
-}
+
+})
 </script>
 
 <style lang="postcss">

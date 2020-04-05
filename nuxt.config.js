@@ -2,10 +2,10 @@
 const routerBase =
   process.env.DEPLOY_ENV === "GH_PAGES"
     ? {
-        router: {
-          base: "/quieneseulier1"
-        }
+      router: {
+        base: "/quieneseulier1"
       }
+    }
     : {}
 
 export default {
@@ -57,13 +57,17 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    "@/plugins/composition-api"
+  ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    "@nuxtjs/tailwindcss"
+    "@nuxtjs/tailwindcss",
+    "@nuxt/typescript-build",
+    ['@nuxtjs/vuetify', { /* module options */ }]
   ],
   /*
    ** Nuxt.js modules
@@ -96,6 +100,10 @@ export default {
         "postcss-preset-env": {}
       }
     },
-    extend(config, ctx) {}
+    typescript: {
+      typeCheck: true,
+      ignoreNotFoundWarnings: true
+    },
+    extend(config, ctx) { }
   }
 }
