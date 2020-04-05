@@ -52,7 +52,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { defineComponent, computed, reactive } from '@vue/composition-api'
 import plugImage from "../assets/plug1.jpg"
 import henrymillerImage from "../assets/henrymiller.jpg"
