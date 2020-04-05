@@ -67,6 +67,10 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxt/typescript-build",
+    // Doc https://github.com/nuxt-community/analytics-module
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-146932600-1'
+    }],
     ['@nuxtjs/vuetify', { /* module options */ }]
   ],
   /*
@@ -99,10 +103,6 @@ export default {
         autoprefixer: true,
         "postcss-preset-env": {}
       }
-    },
-    typescript: {
-      typeCheck: true,
-      ignoreNotFoundWarnings: true
     },
     extend(config, ctx) { }
   }
