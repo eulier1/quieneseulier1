@@ -1,19 +1,21 @@
 <template>
-	<main>
-		<hero />
-		<project />
-	</main>
+	<div>
+		<core-app-bar />
+
+		<core-view />
+
+		<core-footer />
+	</div>
 </template>
 
-<style lang="stylus"></style>
+<script>
+  export default {
+    name: 'App',
 
-<script lang="ts">
-
-import { defineComponent, computed, reactive } from "@vue/composition-api";
-import Hero from "~/components/Hero.vue"
-import Project from "~/components/Projects.vue"
-
-export default defineComponent({
-  components: { Hero, Project }
-})
+    components: {
+      CoreAppBar: () => import('@/components/core/AppBar'),
+	  CoreView: () => import('@/components/core/View'),
+	  CoreFooter: () => import('@/components/core/Footer'),
+    },
+  }
 </script>

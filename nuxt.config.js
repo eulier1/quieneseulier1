@@ -32,17 +32,12 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Fira+Code:300|Lato:100,400,700&display=swap"
+          "https://fonts.googleapis.com/css?family=Fira+Code:100,400,700|Lato:100,400,700&display=swap"
       },
       {
         rel: "stylesheet",
         href:
-          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css"
+          "https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
       }
     ]
   },
@@ -58,25 +53,25 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    "@/plugins/composition-api"
+    "@/plugins/base"
   ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    "@nuxtjs/tailwindcss",
     "@nuxt/typescript-build",
     // Doc https://github.com/nuxt-community/analytics-module
     ['@nuxtjs/google-analytics', {
       id: 'UA-146932600-1'
     }],
-    ['@nuxtjs/vuetify', { /* module options */ }]
   ],
   /*
    ** Nuxt.js modules
    */
-  modules: ["nuxt-fontawesome"],
+  modules: ['@nuxtjs/vuetify'],
+  vuetify: {
+    optionsPath: '@/plugins/vuetify.ts'
+  },
   /*
    ** Build configuration
    */
@@ -89,21 +84,12 @@ export default {
   },
   server: {
     port: 3000,
-    host: "localhost"
+    host: "192.168.130.188"
   },
   build: {
     /*
      ** You can extend webpack config here
      */
-    postcss: {
-      // Add plugin names as key and arguments as value
-      // Install them before as dependencies with npm or yarn
-      plugins: {
-        // Disable a plugin by passing false as value
-        autoprefixer: true,
-        "postcss-preset-env": {}
-      }
-    },
     extend(config, ctx) { }
   }
 }
