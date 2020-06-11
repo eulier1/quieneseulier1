@@ -33,11 +33,6 @@ export default {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Fira+Code:100,400,700|Lato:100,400,700&display=swap"
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
       }
     ]
   },
@@ -90,6 +85,14 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) { }
+    extend(config, ctx) { },
+    optimization :{
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: 'test',
+        maxSize : 256000
+      }
+    }
   }
 }
