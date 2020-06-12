@@ -18,7 +18,7 @@
           class="text-center"
           style="padding: 200px 0 10px 0"
         >
-          Project?, let's talk. ☕
+          Got a project?, let's talk. ☕
         </base-heading>
         <v-footer
           height="88"
