@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-btn
-      v-for="(item, i) in items.slice(0, large ? items.length : 3)"
+      v-for="(item, i) in items.slice(0, large ? items.length : 2)"
       :key="i"
       fab
       class="ma-2"
