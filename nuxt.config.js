@@ -28,12 +28,7 @@ export default {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Fira+Code:100,400,700|Lato:100,400,700&display=swap"
-      }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
   /*
@@ -65,7 +60,14 @@ export default {
    */
   modules: ['@nuxtjs/vuetify'],
   vuetify: {
-    optionsPath: '@/plugins/vuetify.ts'
+    optionsPath: '@/plugins/vuetify.ts',
+    treeShake: true,
+    defaultAssets: {
+      font: {
+        family: 'Roboto' 
+      },
+      icons: 'mdi'
+    }
   },
   /*
    ** Build configuration

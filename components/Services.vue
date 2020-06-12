@@ -85,7 +85,7 @@
         },
         {
           name: 'SPA & SSR',
-          icon: 'mdi-settings-outline',
+          icon: 'mdi-cog-outline',
           blurb: '',
         },
         {
