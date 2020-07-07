@@ -28,7 +28,11 @@ export default {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ]
   },
   /*
@@ -64,7 +68,7 @@ export default {
     treeShake: true,
     defaultAssets: {
       font: {
-        family: 'Roboto' 
+        family: 'Roboto'
       },
       icons: 'mdi'
     }
@@ -81,19 +85,18 @@ export default {
   },
   server: {
     port: 3000,
-    host: "192.168.130.188"
   },
   build: {
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) { },
-    optimization :{
+    optimization: {
       splitChunks: {
         chunks: 'all',
         automaticNameDelimiter: '.',
         name: 'test',
-        maxSize : 256000
+        maxSize: 256000
       }
     }
   }
