@@ -42,7 +42,7 @@
         {
           name: 'Blog',
           icon: 'mdi-forum',
-          url: 'https://gallant-bell-850d88.netlify.com/',
+          url: 'https://gallant-bell-850d88.netlify.app/2020/july/pic-in-pic-project.html',
         },
         {
           name: 'Twitter',
