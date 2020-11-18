@@ -34,9 +34,9 @@
             <base-heading>Eulier González</base-heading>
             <base-text>
               <br>
-              Do you need a <strong> reliable, efficient and very communicate </strong> freelancer that can assist you with your <br>
-              <strong> Landing Page, SEO, SPA, SSR, Startup or Consulting?.</strong> <br>
-              Check my work for yourself and choose.
+              <strong> Full Stack Developer - Front End Specialized</strong>
+              <br> Landing Page, SEO, SPA, SSR, PWA, Startup or Consulting. <br>
+              Take a look.
             </base-text>
           </v-col>
         </v-row>
