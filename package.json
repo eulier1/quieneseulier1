@@ -15,12 +15,12 @@
   },
   "dependencies": {
     "@vue/composition-api": "^0.5.0",
-    "nuxt": "^2.13.3"
+    "nuxt": "^2.14.7"
   },
   "devDependencies": {
     "@nuxt/types": "^0.7.9",
     "@nuxt/typescript-build": "^0.6.7",
-    "@nuxtjs/google-analytics": "^2.3.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "push-dir": "^0.4.1"
   }
