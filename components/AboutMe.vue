@@ -4,9 +4,7 @@
       <v-col class="pa-5" cols="12" md="6">
         <base-bubble-1 style="transform: translate(5%, -5%)" />
 
-        <base-heading class="info--text text-center">
-          About Me
-        </base-heading>
+        <base-heading class="info--text text-center"> About Me </base-heading>
 
         <base-text class="mb-10 pa-10">
           A Venezuela-Born, Web Full Stack Developer living in Buenos Aires.
@@ -27,22 +25,25 @@
           <br />
         </base-text>
 
-        <base-heading class="info--text text-center">
-          Blog
-        </base-heading>
+        <base-heading class="info--text text-center"> Blog </base-heading>
 
         <v-container class="pa-5">
           <v-row>
             <v-col
               cols="12"
               md="12"
-              style="display:flex; justify-content:center; align-content: center; flex-wrap: wrap;"
+              style="
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+              "
             >
               <v-btn
                 color="primary mt-10"
                 large
                 @click="showAllProjects"
-                href="https://gallant-bell-850d88.netlify.app/2020/july/pic-in-pic-project.html"
+                href="https://gallant-bell-850d88.netlify.app/2020/december/nuxt-and-contentful-to-build-a-multilanguage-webapp.html"
                 target="_blank"
               >
                 Take a look!
