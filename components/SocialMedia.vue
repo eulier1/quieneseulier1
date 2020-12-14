@@ -10,46 +10,44 @@
       :href="item.url"
       target="_blank"
     >
-      <v-icon
-        dark
-        v-text="item.icon"
-      />
+      <v-icon dark v-text="item.icon" />
     </v-btn>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      large: {
-        type: Boolean,
-        default: false,
-      },
+export default {
+  props: {
+    large: {
+      type: Boolean,
+      default: false,
     },
+  },
 
-    data: () => ({
-      items: [
-        {
-          name: 'Linkedin',
-          icon: 'mdi-linkedin',
-          url: 'https://www.linkedin.com/in/eulier-gonzalez-69079096/',
-        },
-        {
-          name: 'Email',
-          icon: 'mdi-email',
-          url: 'mailto:eulier1@gmail.com',
-        },
-        {
-          name: 'Blog',
-          icon: 'mdi-forum',
-          url: 'https://gallant-bell-850d88.netlify.app/2020/july/pic-in-pic-project.html',
-        },
-        {
-          name: 'Twitter',
-          icon: 'mdi-twitter',
-          url: 'https://twitter.com/arthard101',
-        },
-      ],
-    }),
-  }
+  data: () => ({
+    items: [
+      {
+        name: "Linkedin",
+        icon: "mdi-linkedin",
+        url: "https://www.linkedin.com/in/eulier-gonzalez-69079096/",
+      },
+      {
+        name: "Email",
+        icon: "mdi-email",
+        url: "mailto:eulier1@gmail.com",
+      },
+      {
+        name: "Blog",
+        icon: "mdi-forum",
+        url:
+          "https://gallant-bell-850d88.netlify.app/2020/december/nuxt-and-contentful-to-build-a-multilanguage-webapp.html",
+      },
+      {
+        name: "Twitter",
+        icon: "mdi-twitter",
+        url: "https://twitter.com/arthard101",
+      },
+    ],
+  }),
+}
 </script>
