@@ -43,7 +43,7 @@
                 color="primary mt-10"
                 large
                 @click="showAllProjects"
-                href="https://gallant-bell-850d88.netlify.app/2020/december/nuxt-and-contentful-to-build-a-multilanguage-webapp.html"
+                href="https://gallant-bell-850d88.netlify.app/2021/january/nuxt-prefetch-optimizations.html"
                 target="_blank"
               >
                 Take a look!
