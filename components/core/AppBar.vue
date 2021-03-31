@@ -3,7 +3,7 @@
     v-scroll="onScroll"
     :color="!isScrolling ? 'transparent' : 'white'"
     fixed
-    flat
+    :flat="!isScrolling"
   >
     <v-slide-x-transition>
       <!-- <v-img
