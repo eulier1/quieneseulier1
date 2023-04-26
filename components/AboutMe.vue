@@ -3,25 +3,29 @@
     <v-row class="white" no-gutters>
       <v-col class="pa-5" cols="12" md="6">
         <base-bubble-1 style="transform: translate(5%, -5%)" />
-
+          <br />
+          <br />          
+          <br />
+          <br />
         <base-heading class="info--text text-center"> About Me </base-heading>
 
         <base-text class="mb-10 pa-10">
-          A Venezuela-Born, Web Full Stack Developer living in Buenos Aires.
+          👨‍💻 5 years as Web Full Stack Developer 
           <br />
-          I migrate in 2019, now working location-independent.
           <br />
-          Responsability & honest communication is what you need and get.
+          🟢 Responsability & honest communication is what you need and get.
           <br />
-          Facing a lot adversity taught me that.
           <br />
-          Why i'm talking all of this?, cause i don't wanna waste each other
-          times with chit chat, faking glamarous presentionals and hollow,
-          shallow, cable news interviews.
+          🟢 Result-oriented not how many hours I put in.
           <br />
-          Delivery-oriented results based on a budget.
           <br />
-          4 years of experience, using web technologies.
+          🟢 Experience in Web RTC like chat-app and CRUD operations
+          <br />
+          <br />
+          🟢 Specialist on Js-Ts based-environment such as Node.js & Browser
+          <br />
+          <br />          
+          <br />
           <br />
         </base-text>
 
